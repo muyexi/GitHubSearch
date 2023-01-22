@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D641B3D297D268C0089A666 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D641B3C297D268C0089A666 /* RepositoryListViewModel.swift */; };
 		8D8D828C297BEA88009FBAC4 /* GitHubSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */; };
 		8D8D828E297BEA88009FBAC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D828D297BEA88009FBAC4 /* ContentView.swift */; };
 		8D8D8290297BEA89009FBAC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D828F297BEA89009FBAC4 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D641B3C297D268C0089A666 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		8D8D8288297BEA88009FBAC4 /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchApp.swift; sourceTree = "<group>"; };
 		8D8D828D297BEA88009FBAC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D641B3B297D26760089A666 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8D641B3C297D268C0089A666 /* RepositoryListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8D8D827F297BEA88009FBAC4 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 				8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */,
 				8D8D828D297BEA88009FBAC4 /* ContentView.swift */,
 				8D8D828F297BEA89009FBAC4 /* Assets.xcassets */,
+				8D641B3B297D26760089A666 /* ViewModel */,
 				8D8D82C0297CC7E2009FBAC4 /* Model */,
 				8D8D82B5297BECC7009FBAC4 /* View */,
 				8D8D8291297BEA89009FBAC4 /* Preview Content */,
@@ -282,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D641B3D297D268C0089A666 /* RepositoryListViewModel.swift in Sources */,
 				8D8D828E297BEA88009FBAC4 /* ContentView.swift in Sources */,
 				8D8D82B9297BED92009FBAC4 /* RepositoryRow.swift in Sources */,
 				8D8D82C2297CC7EA009FBAC4 /* Repository.swift in Sources */,
