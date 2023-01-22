@@ -16,6 +16,7 @@
 		8D8D82A9297BEA89009FBAC4 /* GitHubSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D82A8297BEA89009FBAC4 /* GitHubSearchUITestsLaunchTests.swift */; };
 		8D8D82B9297BED92009FBAC4 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D82B8297BED92009FBAC4 /* RepositoryRow.swift */; };
 		8D8D82BE297CC29F009FBAC4 /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D82BD297CC29F009FBAC4 /* RepositoryList.swift */; };
+		8D8D82C2297CC7EA009FBAC4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D82C1297CC7EA009FBAC4 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8D8D82A8297BEA89009FBAC4 /* GitHubSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8D8D82B8297BED92009FBAC4 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
 		8D8D82BD297CC29F009FBAC4 /* RepositoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
+		8D8D82C1297CC7EA009FBAC4 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */,
 				8D8D828D297BEA88009FBAC4 /* ContentView.swift */,
 				8D8D828F297BEA89009FBAC4 /* Assets.xcassets */,
+				8D8D82C0297CC7E2009FBAC4 /* Model */,
 				8D8D82B5297BECC7009FBAC4 /* View */,
 				8D8D8291297BEA89009FBAC4 /* Preview Content */,
 			);
@@ -139,6 +142,14 @@
 				8D8D82B8297BED92009FBAC4 /* RepositoryRow.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8D8D82C0297CC7E2009FBAC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D8D82C1297CC7EA009FBAC4 /* Repository.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			files = (
 				8D8D828E297BEA88009FBAC4 /* ContentView.swift in Sources */,
 				8D8D82B9297BED92009FBAC4 /* RepositoryRow.swift in Sources */,
+				8D8D82C2297CC7EA009FBAC4 /* Repository.swift in Sources */,
 				8D8D828C297BEA88009FBAC4 /* GitHubSearchApp.swift in Sources */,
 				8D8D82BE297CC29F009FBAC4 /* RepositoryList.swift in Sources */,
 			);
