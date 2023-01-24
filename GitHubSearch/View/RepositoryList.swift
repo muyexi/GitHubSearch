@@ -18,16 +18,12 @@ struct RepositoryList: View {
             Text("Type to search Repositories")
         case .loading:
             Text("Searching for \(viewModel.searchText)...")
-        case .loaded:
-            List {
-                RepositoryRow()
-                RepositoryRow()
-                RepositoryRow()
-                RepositoryRow()
-                RepositoryRow()
+        case let .loaded(result):
+            List(result.items) { repo in
+                RepositoryRow(repo: repo)
             }
-        case .failed:
-            Text("An Error Occured")
+        case let .failed(error):
+            Text("An Error Occured: \(error.localizedDescription)")
         }
     }
 }
