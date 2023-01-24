@@ -30,6 +30,6 @@ struct RepositoryList: View {
 
 struct RepositoryList_Previews: PreviewProvider {
     static var previews: some View {
-        RepositoryList(viewModel: RepositoryListViewModel())
+        RepositoryList(viewModel: RepositoryListViewModel(service: SearchRepositoryService()))
     }
 }
