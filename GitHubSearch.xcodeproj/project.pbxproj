@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D2822C22982AE3400772511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D2822C22982AE3400772511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D5C20F329801205003E1978 /* SearchRepositoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoryService.swift; sourceTree = "<group>"; };
 		8D5C20F429801205003E1978 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		8D641B3C297D268C0089A666 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D2822C32982C66400772511 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D2822C22982AE3400772511 /* Info.plist */,
+				8D8D828F297BEA89009FBAC4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8D5C20F0298011FA003E1978 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,15 +135,13 @@
 		8D8D828A297BEA88009FBAC4 /* GitHubSearch */ = {
 			isa = PBXGroup;
 			children = (
-				8D2822C22982AE3400772511 /* Info.plist */,
 				8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */,
-				8D8D828D297BEA88009FBAC4 /* ContentView.swift */,
-				8D8D828F297BEA89009FBAC4 /* Assets.xcassets */,
 				8D5C20F0298011FA003E1978 /* Service */,
 				8D641B3B297D26760089A666 /* ViewModel */,
 				8D8D82C0297CC7E2009FBAC4 /* Model */,
 				8D8D82B5297BECC7009FBAC4 /* View */,
 				8D8D8291297BEA89009FBAC4 /* Preview Content */,
+				8D2822C32982C66400772511 /* Resources */,
 			);
 			path = GitHubSearch;
 			sourceTree = "<group>";
@@ -168,6 +175,7 @@
 		8D8D82B5297BECC7009FBAC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D8D828D297BEA88009FBAC4 /* ContentView.swift */,
 				8D8D82BD297CC29F009FBAC4 /* RepositoryList.swift */,
 				8D8D82B8297BED92009FBAC4 /* RepositoryRow.swift */,
 			);

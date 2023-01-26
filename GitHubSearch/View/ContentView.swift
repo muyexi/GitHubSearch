@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel: RepositoryListViewModel = RepositoryListViewModel(service: SearchRepositoryService())
+    @ObservedObject var viewModel = RepositoryListViewModel(service: SearchRepositoryService())
     
     var body: some View {
         RepositoryList(viewModel: viewModel)
