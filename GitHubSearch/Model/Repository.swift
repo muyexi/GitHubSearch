@@ -37,3 +37,18 @@ struct Repository: Codable, Identifiable, Equatable {
         return lhs.id == rhs.id
     }
 }
+
+extension Repository {
+    static let mockedData =
+        Repository(
+            id: 75_287_738,
+            name: "ios",
+            fullName: "nextcloud/ios",
+            language: "Swift",
+            description: "📱 Nextcloud iOS App",
+            htmlUrl: "https://github.com/nextcloud/ios",
+            stargazersCount: 1457,
+            owner: Repository.Owner(
+                login: "nextcloud",
+                avatarUrl: "https://avatars.githubusercontent.com/u/19211038?v=4"))
+}

@@ -36,19 +36,6 @@ struct RepositoryRow: View {
 
 struct RepositoryRow_Previews: PreviewProvider {
     static var previews: some View {
-        let repo =
-            Repository(
-                id: 75_287_738,
-                name: "ios",
-                fullName: "nextcloud/ios",
-                language: "Swift",
-                description: "📱 Nextcloud iOS App",
-                htmlUrl: "https://github.com/nextcloud/ios",
-                stargazersCount: 1457,
-                owner: Repository.Owner(
-                    login: "nextcloud",
-                    avatarUrl: "https://avatars.githubusercontent.com/u/19211038?v=4"))
-
-        RepositoryRow(repo: repo).previewLayout(.fixed(width: 300, height: 150))
+        RepositoryRow(repo: Repository.mockedData).previewLayout(.fixed(width: 300, height: 150))
     }
 }
