@@ -1,11 +1,15 @@
 import Foundation
 
-struct SearchResult<Type: Codable>: Codable {
+struct SearchResult<Type: Codable & Equatable>: Codable, Equatable {
     var totalCount: Int
     var items: [Type]
+
+    static func == (lhs: SearchResult<Type>, rhs: SearchResult<Type>) -> Bool {
+        return lhs.items == rhs.items
+    }
 }
 
-struct Repository: Codable, Identifiable {
+struct Repository: Codable, Identifiable, Equatable {
     var id: Int
     var name: String
     var fullName: String
@@ -27,5 +31,9 @@ struct Repository: Codable, Identifiable {
     struct Owner: Codable {
         var login: String
         var avatarUrl: String
+    }
+
+    static func == (lhs: Repository, rhs: Repository) -> Bool {
+        return lhs.id == rhs.id
     }
 }
