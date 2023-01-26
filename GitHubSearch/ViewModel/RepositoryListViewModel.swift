@@ -21,10 +21,10 @@ class RepositoryListViewModel: ObservableObject {
             return "Type to search"
         case .loading:
             return "Searching for \(searchText)..."
+        case let .loaded(result):
+            return "\(result.totalCount) results"
         case let .failed(error):
             return "An Error Occured: \(error.localizedDescription)"
-        default:
-            return ""
         }
     }
 
@@ -35,9 +35,7 @@ class RepositoryListViewModel: ObservableObject {
             .filter { !$0.isEmpty }
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .map({ query -> AnyPublisher<SearchResult<Repository>, Error> in
-                if case .none = self.status {
-                    self.status = .loading
-                }
+                self.status = .loading
                 return service.search(query: query)
             })
             .switchToLatest()

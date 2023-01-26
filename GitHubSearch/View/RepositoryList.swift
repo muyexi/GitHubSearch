@@ -13,11 +13,16 @@ struct RepositoryList: View {
     }
 
     @ViewBuilder private var content: some View {
-        if case let .loaded(result) = viewModel.status {
+        switch viewModel.status {
+        case .loading:
+            Text(viewModel.statusMessage)
+            ProgressView()
+        case let .loaded(result):
             List(result.items) { repo in
                 RepositoryRow(repo: repo)
             }
-        } else {
+            Text(viewModel.statusMessage).font(.footnote).foregroundColor(.gray)
+        default:
             Text(viewModel.statusMessage)
         }
     }
