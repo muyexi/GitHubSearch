@@ -33,19 +33,14 @@ class RepositoryListViewModel: ObservableObject {
 
         $searchText
             .filter { !$0.isEmpty }
-            .debounce(for: 1, scheduler: DispatchQueue.main)
-            .sink { query in
-                self.search(query: query)
-            }
-            .store(in: &cancelBag)
-    }
-
-    func search(query: String) {
-        if case .none = status {
-            status = .loading
-        }
-
-        service.search(query: query)
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .map({ query -> AnyPublisher<SearchResult<Repository>, Error> in
+                if case .none = self.status {
+                    self.status = .loading
+                }
+                return service.search(query: query)
+            })
+            .switchToLatest()
             .sink { completion in
                 if case let .failure(error) = completion {
                     self.status = LoadingStatus.failed(error)
