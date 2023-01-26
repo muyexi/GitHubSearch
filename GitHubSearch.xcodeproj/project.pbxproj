@@ -10,6 +10,7 @@
 		8D5C20F529801205003E1978 /* SearchRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C20F329801205003E1978 /* SearchRepositoryService.swift */; };
 		8D5C20F629801205003E1978 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5C20F429801205003E1978 /* ServiceProtocol.swift */; };
 		8D641B3D297D268C0089A666 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D641B3C297D268C0089A666 /* RepositoryListViewModel.swift */; };
+		8D6914CA29816204008E6475 /* MockedServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6914C929816204008E6475 /* MockedServices.swift */; };
 		8D8D828C297BEA88009FBAC4 /* GitHubSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */; };
 		8D8D828E297BEA88009FBAC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D828D297BEA88009FBAC4 /* ContentView.swift */; };
 		8D8D8290297BEA89009FBAC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D828F297BEA89009FBAC4 /* Assets.xcassets */; };
@@ -40,9 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D2822C22982AE3400772511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D5C20F329801205003E1978 /* SearchRepositoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoryService.swift; sourceTree = "<group>"; };
 		8D5C20F429801205003E1978 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		8D641B3C297D268C0089A666 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
+		8D6914C929816204008E6475 /* MockedServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedServices.swift; sourceTree = "<group>"; };
 		8D8D8288297BEA88009FBAC4 /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchApp.swift; sourceTree = "<group>"; };
 		8D8D828D297BEA88009FBAC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		8D8D828A297BEA88009FBAC4 /* GitHubSearch */ = {
 			isa = PBXGroup;
 			children = (
+				8D2822C22982AE3400772511 /* Info.plist */,
 				8D8D828B297BEA88009FBAC4 /* GitHubSearchApp.swift */,
 				8D8D828D297BEA88009FBAC4 /* ContentView.swift */,
 				8D8D828F297BEA89009FBAC4 /* Assets.xcassets */,
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8D829C297BEA89009FBAC4 /* GitHubSearchTests.swift */,
+				8D6914C929816204008E6475 /* MockedServices.swift */,
 			);
 			path = GitHubSearchTests;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6914CA29816204008E6475 /* MockedServices.swift in Sources */,
 				8D8D829D297BEA89009FBAC4 /* GitHubSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +482,7 @@
 				DEVELOPMENT_TEAM = AAKJL3KUU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -505,7 +511,7 @@
 				DEVELOPMENT_TEAM = AAKJL3KUU2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

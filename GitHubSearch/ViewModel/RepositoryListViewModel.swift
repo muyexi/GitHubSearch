@@ -6,6 +6,15 @@ enum LoadingStatus<T> {
     case loading
     case loaded(T)
     case failed(Error)
+
+    var value: T? {
+        switch self {
+        case let .loaded(value):
+            return value
+        default:
+            return nil
+        }
+    }
 }
 
 class RepositoryListViewModel: ObservableObject {

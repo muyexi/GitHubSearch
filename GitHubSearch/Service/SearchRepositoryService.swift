@@ -2,11 +2,11 @@ import Foundation
 import SwiftUI
 import Combine
 
-protocol SearchAPIProtocol {
+protocol SearchRepositoryProtocol: ServiceProtocol {
     func search(query: String) -> AnyPublisher<SearchResult<Repository>, Error>
 }
 
-class SearchRepositoryService: ServiceProtocol {
+class SearchRepositoryService: SearchRepositoryProtocol {
     var baseURL: String {
         return "https://api.github.com/"
     }
