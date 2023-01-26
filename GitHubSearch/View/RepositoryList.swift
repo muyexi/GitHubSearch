@@ -13,17 +13,12 @@ struct RepositoryList: View {
     }
 
     @ViewBuilder private var content: some View {
-        switch viewModel.status {
-        case .none:
-            Text("Type to search Repositories")
-        case .loading:
-            Text("Searching for \(viewModel.searchText)...")
-        case let .loaded(result):
+        if case let .loaded(result) = viewModel.status {
             List(result.items) { repo in
                 RepositoryRow(repo: repo)
             }
-        case let .failed(error):
-            Text("An Error Occured: \(error.localizedDescription)")
+        } else {
+            Text(viewModel.statusMessage)
         }
     }
 }

@@ -15,6 +15,19 @@ class RepositoryListViewModel: ObservableObject {
     let service: SearchRepositoryService
     private var cancelBag = Set<AnyCancellable>()
 
+    var statusMessage: String {
+        switch status {
+        case .none:
+            return "Type to search"
+        case .loading:
+            return "Searching for \(searchText)..."
+        case let .failed(error):
+            return "An Error Occured: \(error.localizedDescription)"
+        default:
+            return ""
+        }
+    }
+
     init(service: SearchRepositoryService) {
         self.service = service
 
